@@ -9,15 +9,15 @@ function setup() {
 
 function palavraAleatoria() {
   
-  let palavras = ["Felipe", "Felizcidade", "Feliz"];
+  let palavras = ["Felipe", "Felizcidade", "Feliz", "Fernando"];
   
   return random(palavras);
 }
 
 function inicializaCores() {
-  background("white");
-  fill("black");
-  textSize(64);
+  background("blue");
+  fill("yellow");
+  textSize(70);
   textAlign(CENTER, CENTER);
 }
 
@@ -30,7 +30,7 @@ function palavraParcial(minimo, maximo) {
 function draw() {
   
   inicializaCores();
-
+  mouse();
   let texto = palavraParcial(0, width);
     
   text(texto, 200, 200);
@@ -41,9 +41,17 @@ function modoNoturno(horario) {
   if (horario > 18) {
     console.log("Come to brazil, please?");
   } else {
-    console.log("projeto por Felipe H.");
-  }
+    console.log("Project by Felipe H.");
+    console.log("Salve o Tricolor paulista")
+  } 
+  
 }
 
 modoNoturno(15);
 modoNoturno(20);
+
+function mouse () {
+ if(mouseX <=10){
+  setup(palavraAleatoria) 
+ }
+}
